@@ -1,0 +1,9 @@
+@import 'colors';
+@import 'units';
+@import 'reset';
+
+html{
+    background-color: $color-main-bg;
+    color: $color-text-regular;
+}
+//set NODE_OPTIONS=--openssl-legacy-provider
