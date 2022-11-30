@@ -1,17 +1,85 @@
 @charset "UTF-8";
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -22,16 +90,29 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -39,16 +120,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -58,19 +143,17 @@ table {
   border-spacing: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-input, button {
+input,
+button {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
+  font-size: 1em;
 }
 
 html {
-  background-color: rgb(22, 22, 26);
-  color: rgb(148, 161, 178);
+  background-color: #16161a;
+  color: #94a1b2;
   font-family: "Netflix Sans";
   color: white;
 }
@@ -79,15 +162,15 @@ a {
   color: white;
 }
 
-[type=checkbox]:not(:checked),
-[type=checkbox]:checked {
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
   position: absolute;
   left: 0;
   opacity: 0.01;
 }
 
-[type=checkbox]:not(:checked) + label,
-[type=checkbox]:checked + label {
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
   position: relative;
   padding-left: 2.3em;
   font-size: 1em;
@@ -96,23 +179,24 @@ a {
 }
 
 /* checkbox aspect */
-[type=checkbox]:not(:checked) + label:before,
-[type=checkbox]:checked + label:before {
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 1.4em;
   height: 1.4em;
-  border: 1px solid rgb(59, 57, 57);
-  background: rgb(185, 185, 185);
+  border: 1px solid #3b3939;
+  background: #b9b9b9;
   border-radius: 0.2em;
+  -webkit-transition: all 0.275s;
   transition: all 0.275s;
 }
 
 /* checked mark aspect */
-[type=checkbox]:not(:checked) + label:after,
-[type=checkbox]:checked + label:after {
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
   content: "✓";
   position: absolute;
   top: 0.525em;
@@ -120,38 +204,67 @@ a {
   font-size: 1.375em;
   color: black;
   line-height: 0;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 /* checked mark aspect changes */
-[type=checkbox]:not(:checked) + label:after {
+[type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
   transform: scale(0) rotate(45deg);
 }
 
-[type=checkbox]:checked + label:after {
+[type="checkbox"]:checked + label:after {
   opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
   transform: scale(1) rotate(0);
 }
 
 /* Disabled checkbox */
-[type=checkbox]:disabled:not(:checked) + label:before,
-[type=checkbox]:disabled:checked + label:before {
-  box-shadow: none;
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-color: #bbb;
   background-color: #e9e9e9;
 }
 
-[type=checkbox]:disabled:checked + label:after {
+[type="checkbox"]:disabled:checked + label:after {
   color: #777;
 }
 
-[type=checkbox]:disabled + label {
+[type="checkbox"]:disabled + label {
   color: #aaa;
 }
 
 .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}/*# sourceMappingURL=style.css.map */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 31.25em) {
+  body {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 124em) {
+  body {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 150em) {
+  body {
+    font-size: 1.25em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
