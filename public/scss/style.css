@@ -250,6 +250,10 @@ a {
           align-items: center;
 }
 
+.logo {
+  max-width: 12.5rem;
+}
+
 @media screen and (max-width: 31.25em) {
   body {
     font-size: 0.8em;
@@ -259,6 +263,9 @@ a {
 @media screen and (min-width: 124em) {
   body {
     font-size: 1.25em;
+  }
+  .logo {
+    max-width: 15rem;
   }
 }
 

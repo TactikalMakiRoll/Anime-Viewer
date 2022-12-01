@@ -1,16 +1,9 @@
 <template>
-  <login-page></login-page>
+  <home-page></home-page>
 </template>
 
-<script>
-import LoginPage from "./pages/LoginPage.vue"
-
-export default {
-  name: "App",
-  components:{
-    LoginPage,
-  }
-};
+<script setup>
+import HomePage from "./pages/HomePage.vue"
 </script>
 
 <style>

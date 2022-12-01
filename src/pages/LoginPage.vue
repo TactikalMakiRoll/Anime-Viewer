@@ -2,7 +2,7 @@
     <div class="login">
         <a href="#">
             <img
-                class="login__logo"
+                class="logo"
                 src="../assets/images/logo.png"
                 alt="Ani-viewer logo, link to home page"
             />
@@ -55,7 +55,9 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+
+</script>
 
 <style lang="scss">
 .login {
@@ -68,83 +70,75 @@
     padding: 2.8125rem 2.8125rem 0 2.8125rem;
     overflow: hidden;
 
-    &__logo {
-        max-width: 12.5rem;
-    }
-
-    &__form {
-        margin-top: 1rem;
-        padding: 3.75rem 4.25rem 3rem 4.25rem;
-
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 5px;
-    }
-
-    &__form * + * {
-        margin-bottom: 1rem;
-    }
-
-    &__form-header {
-        margin-bottom: 2rem;
-        font-size: 2em;
-        font-weight: bold;
-    }
-
-    &__form-label {
-        display: none;
-    }
-
-    &__form-input {
-        display: block;
-        width: 100%;
-
-        margin-bottom: 1rem;
-        padding: 1rem 1.25rem;
-
-        border: none;
-        border-radius: 5px;
-        background-color: rgba(51, 51, 51, 1);
-
-        font-weight: bold;
-        color: rgba(140, 140, 140, 1);
-    }
-
-    &__form-button {
-        width: 100%;
-        padding: 1rem 1.25rem;
-
-        background-color: rgba(169, 16, 19, 1);
-        border: none;
-        border-radius: 5px;
-
-        font-weight: bold;
-        color: rgba(255, 255, 255, 1);
-    }
-
-    &__socials {
-        margin: 1rem 0 0 0;
-        text-align: center;
-        font-weight: lighter;
-    }
-
-    &__social {
-        width: 2.5rem;
-        margin-top: 1.5rem;
-        padding: 5px;
-        border: 3px rgb(53, 124, 238) solid;
-        border-radius: 10px;
-        background-color: rgb(237, 236, 236);
-    }
-
-    &__social:hover {
-        background-color: rgb(255, 255, 255);
-        border-color: rgb(23, 89, 196) solid;
-    }
 }
 
-@media screen and (max-width: 77.5em) {
-    .login {
-    }
+.login__form {
+    margin-top: 1rem;
+    padding: 3.75rem 4.25rem 3rem 4.25rem;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+.login__form * + * {
+    margin-bottom: 1rem;
+}
+
+.login__form-header {
+    margin-bottom: 2rem;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.login__form-label {
+    display: none;
+}
+
+.login__form-input {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(51, 51, 51, 1);
+
+    font-weight: bold;
+    color: rgba(140, 140, 140, 1);
+}
+
+.login__form-button {
+    width: 100%;
+    padding: 1rem 1.25rem;
+
+    background-color: rgba(169, 16, 19, 1);
+    border: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+}
+
+.login__socials {
+    margin: 1rem 0 0 0;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.login__social {
+    width: 2.5rem;
+    margin-top: 1.5rem;
+    padding: 5px;
+    border: 3px rgb(53, 124, 238) solid;
+    border-radius: 10px;
+    background-color: rgb(237, 236, 236);
+}
+
+.login__social:hover {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(23, 89, 196) solid;
 }
 
 @media screen and (max-width: 31.25em) {
@@ -155,6 +149,7 @@
 }
 
 @media screen and (min-width: 124em) {
+
     .login__form {
         width: 30vw;
         max-width: 850px;
