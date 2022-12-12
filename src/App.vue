@@ -22,7 +22,7 @@ import HomePage from "./pages/HomePage.vue"
 @font-face {
   font-family: "Netflix Sans";
   src: url(../fonts/Netflix\ Sans\ Light.otf) format("opentype");
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 </style>

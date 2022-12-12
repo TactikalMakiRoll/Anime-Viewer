@@ -160,6 +160,17 @@ html {
 
 a {
   color: white;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.container {
+  padding: 0 3.625rem;
 }
 
 [type="checkbox"]:not(:checked),
@@ -252,6 +263,7 @@ a {
 
 .logo {
   max-width: 12.5rem;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 31.25em) {
